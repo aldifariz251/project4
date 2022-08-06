@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .form1 {
+            width: 50%;
+            margin: 20px auto;
+            box-shadow: 5px 5px 15px 2px #aaaaaa;
+            padding: 20px;
+            border-radius: 25px;
+        }
+        label, input, a {
+            margin-bottom: 10px;
+            /* width: 30%; */
+        }
+    </style>
+    <title>Tambah Daftar Motor</title>
+</head>
+<body>
+    <form action="create" method="POST" class="form1">
+    {% csrf_token %}
+        <h1>Sign Up</h1>
+        
+        <label for="username">Username: </label>
+        <input type="text" id="nama" placeholder="Insert your name here!" autocomplete="off" autofocus class="form-control" required> 
+        
+        <label for="email">Email: </label>
+        <input type="text" id="email" placeholder="Insert your email here!" autocomplete="off" autofocus class="form-control" required>
+
+        <label for="password">Password: </label>
+        <input type="text" id="password" placeholder="Insert your password here!" autocomplete="off" autofocus class="form-control" required>
+
+        <input type="submit" value="Submit" class="btn btn-primary">
+        <a href="/" class="btn btn-danger">Cancel</a>
+    </form>
+</body>
+</html>
